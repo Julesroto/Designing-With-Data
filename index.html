@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PULSE. Finance, without the confusion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-trend="flat">
+<header>
+  <div class="wrap">
+    <nav id="nav" aria-label="Main">
+      <a class="logo" href="#home">PULSE<i>.</i></a>
+      <div class="links"><a href="#home" data-v="home">Home</a><a href="#news" data-v="news">News</a><a href="#tips-resources" data-v="tips-resources">Tips &amp; Resources</a></div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="q" placeholder="Search a company" aria-label="Search a company"></label>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero" data-view="home">
+    <div>
+      <p class="kicker">Your financial daily</p>
+      <h1>The market, made simple.</h1>
+      <p class="lead">Understand what’s happening in the financial world without needing a finance degree.</p>
+      <div class="btns"><a class="btn p" href="#home" onclick="document.getElementById('markets').scrollIntoView({behavior:'smooth'});return false">Explore the market</a><a class="btn g" href="#tips-resources">How it works</a></div>
+    </div>
+    <div class="pulsebox" aria-label="Live market pulse">
+      <div class="top"><span id="heroSym">S&amp;P 500</span><span class="chip" id="heroChip">Steady</span></div>
+      <div class="big num" id="heroPrice">–</div>
+      <svg viewBox="0 0 400 130" preserveAspectRatio="none" aria-hidden="true"><polyline id="heroLine" points=""/></svg>
+      <div class="live"><span class="dot"></span><span id="status">Connecting…</span></div>
+    </div>
+  </div>
+
+  <section id="markets" data-view="home">
+    <div class="sh">
+      <div><h2>Market overview</h2><p>Pick a company. The chart, colours and mood update with the data.</p></div>
+      <div class="tabs" id="ranges" role="group" aria-label="Time range">
+        <button class="tab" data-r="day" aria-pressed="true">Today</button>
+        <button class="tab" data-r="week" aria-pressed="false">Week</button>
+        <button class="tab" data-r="month" aria-pressed="false">Month</button>
+      </div>
+    </div>
+    <div class="ov">
+      <div class="card">
+        <div id="chartName" style="font-weight:600;color:var(--muted)">S&amp;P 500 (tracked with SPY)</div>
+        <div class="priceRow"><span class="big num" id="price">–</span><span class="pct" id="pct">–</span></div>
+        <div class="chart">
+          <svg id="chart" viewBox="0 0 700 280" role="img" aria-label="Price chart">
+            <path id="area"/><path id="line"/>
+            <line id="cursor" y1="0" y2="280" stroke="var(--lav)" stroke-width="1.5" opacity="0"/>
+            <circle id="dotc" r="6" fill="var(--trend)" stroke="#fff" stroke-width="2" opacity="0"/>
+          </svg>
+          <div class="tip" id="tip"></div>
+        </div>
+        <p class="note" id="note">Hover or touch the chart for exact values.</p>
+      </div>
+      <div class="card side">
+        <h3>Market snapshot</h3>
+        <div id="list"></div>
+        <div class="mood"><span style="color:var(--muted);font-size:.9rem">Market mood</span><br><strong id="mood">Steady</strong>
+          <div class="meter"><i id="meter"></i></div>
+          <div class="note" style="margin-top:8px">Based on index movement</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" data-view="news">
+    <div class="sh"><div><h2>What’s happening?</h2><p>Today’s top stories, explained plainly.</p></div></div>
+    <div class="news" id="newsGrid"></div>
+  </section>
+
+  <section id="learn" data-view="tips-resources" style="padding-bottom:0">
+    <div class="learn">
+      <h2>Investing can be simple.</h2>
+      <p>Learn financial terms, understand the news and build your knowledge one step at a time. Tap a term to see it in action.</p>
+      <div class="terms" id="terms"></div>
+    </div>
+  </section>
+  <footer>Prices shown are sample data unless a Finnhub key is added in the code. Not financial advice.</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
