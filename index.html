@@ -69,10 +69,104 @@
     </div>
   </section>
 
-  <section id="news" data-view="news">
-    <div class="sh"><div><h2>What’s happening?</h2><p>Today’s top stories, explained plainly.</p></div></div>
-    <div class="news" id="newsGrid"></div>
-  </section>
+  <!-- ===== PULSE news page: replace your whole <section id="news" ...> ... </section> with this block ===== -->
+<section id="news" data-view="news">
+  <div class="sh">
+    <div>
+      <h2>What’s happening?</h2>
+      <p>Canada’s money news, explained plainly. Stories from late October to mid-November 2026.</p>
+    </div>
+    <div class="tabs" role="group" aria-label="Filter stories">
+      <button class="nf" data-f="all" aria-pressed="true">All</button>
+      <button class="nf" data-f="economy" aria-pressed="false">Economy</button>
+      <button class="nf" data-f="markets" aria-pressed="false">Markets</button>
+      <button class="nf" data-f="business" aria-pressed="false">Business</button>
+    </div>
+  </div>
+
+  <!-- Featured story -->
+  <article class="card story feat hot" data-cat="economy">
+    <div class="ftext">
+      <span class="tag">Economy · Canada</span>
+      <span class="date">Oct 28, 2026</span>
+      <h3>Bank of Canada raises its key interest rate to 2.5%</h3>
+      <p>The central bank raised its benchmark rate by a quarter of a percentage point, as markets expected. It had held the rate at 2.25% for seven meetings in a row.</p>
+      <div class="why">The key rate sets how expensive it is for banks to borrow, which flows through to mortgages, car loans and credit cards. Raising it makes borrowing cost more, which slows spending and helps cool rising prices. Savers can earn a little more, but borrowers pay more.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://tradingeconomics.com/canada/stock-market/news/595852" target="_blank" rel="noopener">Source: Trading Economics ↗</a></div>
+    </div>
+    <div class="stat" aria-label="Key rate 2.5 percent, up from 2.25 percent">
+      <span class="num">2.5%</span>
+      <small>Key rate, up from 2.25%</small>
+    </div>
+  </article>
+
+  <div class="news" id="canadaNews">
+    <article class="card story" data-cat="economy">
+      <span class="tag">Economy</span><span class="date">Oct 26, 2026</span>
+      <h3>Inflation climbs to 3.1% as gas prices rise</h3>
+      <p>Statistics Canada reported that annual inflation rose in September, with the war in the Middle East pushing up gasoline prices.</p>
+      <div class="why">Inflation is how fast everyday prices rise. At 3.1%, something that cost $100 a year ago now costs about $103. That is one reason the Bank of Canada raised rates.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://www.bnnbloomberg.ca/business/economics/2026/10/26/bank-of-canada-now-expected-to-hike-key-rate-as-it-faces-pivotal-decision/" target="_blank" rel="noopener">Source: BNN Bloomberg ↗</a></div>
+    </article>
+
+    <article class="card story" data-cat="markets">
+      <span class="tag">Markets</span><span class="date">Oct 28, 2026</span>
+      <h3>The TSX holds steady near 36,000</h3>
+      <p>Canada’s main stock index closed up 0.3% at 36,265 after the rate decision, with banks gaining and several gold miners reporting earnings.</p>
+      <div class="why">The S&amp;P/TSX Composite is like a scoreboard for Canada’s biggest listed companies, such as banks, miners and energy firms. When it rises, those companies are worth more overall.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://tradingeconomics.com/canada/stock-market/news/595852" target="_blank" rel="noopener">Source: Trading Economics ↗</a></div>
+    </article>
+
+    <article class="card story" data-cat="economy">
+      <span class="tag">Economy · US</span><span class="date">Oct 28, 2026</span>
+      <h3>US Federal Reserve holds rates, hints at nothing</h3>
+      <p>On the same day, the Fed kept rates unchanged but gave no clear signal on whether it might raise them in December.</p>
+      <div class="why">The Fed is the US version of the Bank of Canada. Because the two economies are closely linked, a US decision can move Canadian markets and the Canadian dollar too.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://tradingeconomics.com/canada/stock-market/news/595852" target="_blank" rel="noopener">Source: Trading Economics ↗</a></div>
+    </article>
+
+    <article class="card story" data-cat="business">
+      <span class="tag">Business</span><span class="date">Oct 27, 2026</span>
+      <h3>Celestica jumps nearly 12% on strong results</h3>
+      <p>The Toronto tech manufacturer beat third-quarter expectations and gave an upbeat revenue outlook for 2027, bouncing back from losses the week before.</p>
+      <div class="why">Companies report results every three months. When results and forecasts beat what investors expected, the share price often jumps. When they miss, it can fall just as fast.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://tradingeconomics.com/canada/stock-market/news/595534" target="_blank" rel="noopener">Source: Trading Economics ↗</a></div>
+    </article>
+
+    <article class="card story" data-cat="markets">
+      <span class="tag">Markets · US</span><span class="date">Nov 18, 2026</span>
+      <h3>S&amp;P 500 slips to its lowest close since July</h3>
+      <p>US stocks had four losing days in a row, though tech futures recovered the next morning as worries about AI spending eased.</p>
+      <div class="why">When US stocks fall, Canadian stocks often follow, since many Canadian firms sell to or invest in the US. A losing streak shows investors are nervous, not that anything is broken.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://stockanalysis.com/market-bullets/2026-11-18/?ksid=3031576619" target="_blank" rel="noopener">Source: StockAnalysis ↗</a></div>
+    </article>
+
+    <article class="card story" data-cat="markets">
+      <span class="tag">Markets</span><span class="date">Nov 4, 2026</span>
+      <h3>Stocks rally as oil falls more than 8%</h3>
+      <p>Oil prices dropped sharply in one day and the Dow jumped, according to CNBC’s reporting.</p>
+      <div class="why">Canada is a big oil producer, so oil prices matter here. Falling oil can ease gas prices for drivers, but it can lower the profits of energy companies on the TSX.</div>
+      <div class="row"><button class="link">Understand this story →</button><a class="src" href="https://stocktitan.net/articles/stock-market-today-live-november-4-2026" target="_blank" rel="noopener">Source: Stock Titan ↗</a></div>
+    </article>
+  </div>
+  <p class="note" style="margin-top:18px">Stories are summaries in plain language, not financial advice. Check the sources for full details.</p>
+
+  <!-- Harmless stub so the original script (which looks for #newsGrid) keeps working unchanged -->
+  <div id="newsGrid" hidden></div>
+
+  <script>
+  // Filter buttons for the news page
+  document.querySelectorAll(".nf").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var f=btn.dataset.f;
+      document.querySelectorAll(".nf").forEach(function(b){b.setAttribute("aria-pressed",b===btn)});
+      document.querySelectorAll("#news .story[data-cat]").forEach(function(c){
+        c.hidden=!(f==="all"||c.dataset.cat===f);
+      });
+    });
+  });
+  </script>
+</section>
 
   <section id="learn" data-view="tips-resources" style="padding-bottom:0">
     <div class="learn">
