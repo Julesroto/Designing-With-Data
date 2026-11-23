@@ -1,5 +1,5 @@
 // ===== CONFIG: paste your free Finnhub key here when hosting on GitHub Pages =====
-const KEY = "";
+const KEY = "dc1ifepr01qlc5urljl0dc1ifepr01qlc5urljlg";
 const FETCH_MS = 60000, TICK_MS = 2500;
 
 const CO = {
